@@ -3,6 +3,7 @@ Smart Garden adalah proyek otomatisasi penyiraman tanaman yang dibuat sebagai pr
 Di dalam repositori ini, ada berbagai percobaan dan use case yang bisa membantu memahami cara kerja sistem Smart Garden. Mulai dari cara mengoperasikan masing-masing sensor, mengintegrasikan beberapa sensor dalam satu sistem, hingga pengimplementasian. Semua ini dirancang agar lebih mudah dipahami dan bisa langsung diterapkan.
 
 Device yang diperlukan: Lynx-32 Development Board, Adaptor 12V, Sensor BME280, Relay, LED, Push Button, OLED Display, ModBus-RTU RS485, Pompa Air, dan Irigasi Tetes.
+
 Software yang diperlukan: Windows, Arduino IDE.
 
 Kalau tertarik untuk belajar lebih lanjut tentang IoT, terutama dalam penerapannya di sistem pertanian cerdas, repo ini bisa jadi referensi yang pas! 🚀🌱
