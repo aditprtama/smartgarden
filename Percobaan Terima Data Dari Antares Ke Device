@@ -1,0 +1,42 @@
+#include  <AntaresESP8266HTTP.h >  
+
+
+#define ACCESSKEY "your-access-key"      
+#define WIFISSID "your-wifi-ssid"        
+#define PASSWORD "your-wifi-password"    
+
+
+#define projectName "your-application-name"  
+#define deviceName "your-device-name"    
+
+
+AntaresESP8266HTTP antares(ACCESSKEY);  
+
+
+void setup() {
+  Serial.begin(115200);    
+  antares.setDebug(true);  
+  antares.wifiConnection(WIFISSID,PASSWORD);  
+}
+
+
+void loop() {
+  antares.get(projectName, deviceName);
+
+
+  int temp = antares.getInt("temperature");
+  int hum = antares.getInt("humidity");
+  float windsp = antares.getFloat("wind_speed");
+  float rainlv = antares.getFloat("rain_level");
+  String lat = antares.getString("latitude");
+  String lon = antares.getString("longitude");
+
+
+  Serial.println("Temperature: " + String(temp));
+  Serial.println("Humidity: " + String(hum));
+  Serial.println("Wind speed: " + String(windsp));
+  Serial.println("Rain level: " + String(rainlv));
+  Serial.println("Latitude: " + lat);
+  Serial.println("Longitude: " + lon);
+  delay(10000);
+}
