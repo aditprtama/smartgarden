@@ -7,3 +7,5 @@ Device yang diperlukan: Lynx-32 Development Board, Adaptor 12V, Sensor BME280, R
 Software yang diperlukan: Windows, Arduino IDE.
 
 Kalau tertarik untuk belajar lebih lanjut tentang IoT, terutama dalam penerapannya di sistem pertanian cerdas, repo ini bisa jadi referensi yang pas! 🚀🌱
+
+![Screenshot 2025-01-15 214941](https://github.com/user-attachments/assets/42243a23-4b43-48f1-b2d9-5a8900c0fa60)
