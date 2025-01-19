@@ -1,0 +1,39 @@
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME280.h>
+ 
+#define SEALEVELPRESSURE_HPA (1013.25)
+ 
+Adafruit_BME280 bme;
+ 
+void setup() {
+  Serial.begin(115200);
+
+  Wire.begin(21, 22);
+ 
+   if (!bme.begin(0x76)) {
+    Serial.println("Tidak dapat menemukan sensor BME280, Cek Wiring!");
+    while (1);
+  }
+}
+ 
+void loop() {
+  Serial.print("Suhu = ");
+  Serial.print(bme.readTemperature());
+  Serial.println(" °C");
+
+  Serial.print("Tekanan = ");
+  Serial.print(bme.readPressure() / 100.0F);
+  Serial.println(" hPa");
+
+  Serial.print("Ketinggian/Elevasi = ");
+  Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
+  Serial.println(" m");
+
+  Serial.print("Kelembapan = ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %");
+
+  Serial.println();
+  delay(2000);
+}
