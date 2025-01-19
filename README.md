@@ -6,6 +6,8 @@ Device yang diperlukan: Lynx-32 Development Board, Adaptor 12V, Sensor BME280, R
 
 Software yang diperlukan: Windows, Arduino IDE.
 
+Library Pendukung (Arduino IDE) : https://drive.google.com/drive/folders/1KV-9Z2dCQbwHoA7hGBdJPDA4EeiGZEYu?usp=sharing
+
 Kalau tertarik untuk belajar lebih lanjut tentang IoT, terutama dalam penerapannya di sistem pertanian cerdas, repo ini bisa jadi referensi yang pas! 🚀🌱
 
 ![Screenshot 2025-01-15 214941](https://github.com/user-attachments/assets/baced14c-0886-4731-aeff-d73617936a58)
