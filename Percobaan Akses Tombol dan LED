@@ -1,0 +1,26 @@
+#define LED 12
+const int buttonPin = 35;
+int ledStatus = LOW;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+
+  if (buttonState == LOW) {
+    Serial.println("Push Button Ditekan!");
+
+    ledStatus = !ledStatus;
+    digitalWrite(LED, ledStatus);
+
+    delay(200);
+
+    while (digitalRead(buttonPin) == LOW) {
+      delay(10);
+    }
+  }
+}
