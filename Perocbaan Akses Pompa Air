@@ -1,0 +1,17 @@
+#define PIN_RELAY_1  14
+const int relayPin = 13;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(relayPin, OUTPUT);
+  digitalWrite(relayPin, LOW);
+}
+
+void loop() {
+  digitalWrite(relayPin, HIGH);
+  Serial.println("Relay Pompa Hidup");
+  delay(2000);
+  digitalWrite(relayPin, LOW);
+  Serial.println("Relay Pompa Mati");
+  delay(2000);
+}
